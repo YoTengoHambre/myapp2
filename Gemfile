@@ -1,11 +1,12 @@
 source 'https://rubygems.org'
+ruby "2.3.3"
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name***REMOVED***/#{repo_name***REMOVED***" unless repo_name.include?("/")
   "https://github.com/#{repo_name***REMOVED***.git"
 end
 
-gem 'jquery-rails'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use Puma as the app server
@@ -39,7 +40,6 @@ group :development, :test do
   gem 'selenium-webdriver'
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
-
 end
 
 group :development do
@@ -51,9 +51,17 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-group :production do
-  gem 'pg'
-end
-
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'jquery-rails'
+
+group :production do
+  gem 'pg', '~> 0.18'
+end
+
+gem 'devise'
+
+gem 'bootstrap', '~> 4.0.0'
+
+gem 'cancancan', '~> 1.10'
