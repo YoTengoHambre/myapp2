@@ -15,6 +15,7 @@ class ProductsController < ApplicationController
   # GET /products/new
   def new
     @product = Product.new
+redirect_to "/simple_pages/landing_page"
   end
 
   # GET /products/1/edit
