@@ -4,23 +4,9 @@
 
 <div class="container-fluid">
   <div class="row">
-    <% @products.each do |product| %>
-      <div class="col-sm-2 col-md-4">
-        <%= image_tag(product.image_url, class: "img-responsive") %>
-        <a href="#"><h1><%= product.name %></h1></a>
-        <p><%= product.description %></p>
-        <strong>$ <%= product.price %></strong>
-        <p>Color: <%= product.color %></p>
-      </div><!-- /col -->
-    <% end %>
+    <%= render @products %>
   </div>
 </div>
 <br>
 
 <%= link_to 'New Product', new_product_path %>
-
-<% paragraph_number = 1 %>
-<% 5.times do %>
-  <p>This is paragraph number <%= paragraph_number %></p>
-  <% paragraph_number = paragraph_number + 1 %>
-<% end %>
