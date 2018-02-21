@@ -4,7 +4,12 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    if params[:q]
+      search_term = params[:q]
+      @products = Product.search(search_term)
+    else
+      @products = Product.all
+    end
   end
 
   # GET /products/1
@@ -15,7 +20,7 @@ class ProductsController < ApplicationController
   # GET /products/new
   def new
     @product = Product.new
-redirect_to "/simple_pages/landing_page"
+   # redirect_to "/simple_pages/landing_page"
   end
 
   # GET /products/1/edit
