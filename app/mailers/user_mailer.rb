@@ -1,7 +1,8 @@
 class UserMailer < ApplicationMailer
   default from: "donotreply@rubyonrailsproductionapp.herokuapp.com"
 
-  def contact_form(email, name, message)
+
+def contact_form(params)
     @name = params[:name]
     @email = params[:email]
     @message = params[:message]
