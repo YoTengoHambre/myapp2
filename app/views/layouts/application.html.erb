@@ -60,9 +60,10 @@
       <form class="navbar-form navbar-left">
         <div class="form-group">
           <!--<input type="text" class="form-control" placeholder="Search">-->
+
 <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
   <%= form.label :q, 'Search for:' %>
-  <%= form.text_field :q, id: 'q', value: params[:q] %>
+  <%= form.text_field :q, id: 'q', value: params[:q], class: "form-control" %>
   <%= form.submit 'Search' %>
 <% end %>
         </div>
