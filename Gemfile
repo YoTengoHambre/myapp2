@@ -2,8 +2,8 @@ source 'https://rubygems.org'
 ruby "2.3.3"
 
 git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
-  "https://github.com/#{repo_name}.git"
+  repo_name = "#{repo_name***REMOVED***/#{repo_name***REMOVED***" unless repo_name.include?("/")
+  "https://github.com/#{repo_name***REMOVED***.git"
 end
 
 
