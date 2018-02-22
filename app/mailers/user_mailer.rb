@@ -2,10 +2,11 @@ class UserMailer < ApplicationMailer
   default from: "donotreply@rubyonrailsproductionapp.herokuapp.com"
 
 
-def contact_form(params)
-    @name = params[:name]
-    @email = params[:email]
-    @message = params[:message]
-mail(:to => 'michael.flaherty01@gmail.com', :subject => "New Message!")
-  end	
+  def contact_form(email, name, message)
+    @message = message
+    @name = name
+      mail(:from => email,
+          :to => 'michael.flaherty01@gmail.com',
+          :subject => "A new contact form message from #{name***REMOVED***")
+	end  
 end
