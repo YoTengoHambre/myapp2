@@ -13,3 +13,28 @@
  *= require_tree .
  *= require_self
  */
+
+.form-signin {
+	max-width: 330px;
+    padding: 15px;
+/*    margin: 0 auto;*/
+}
+.center-form {
+	margin: 0 auto;
+}
+
+.button {
+    display: block;
+    width: 100%;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+
+.inline {
+	display: inline;
+}
