@@ -1,3 +1,15 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.product h1 {
+	font-size: 20px;
+}
+
+.product strong, .product p {
+	margin: 0 0 5px;
+}
+.product strong {
+	display: inline-block;
+}
