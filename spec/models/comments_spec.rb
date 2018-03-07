@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Comments do
+describe Comment do
 
 
 end
