@@ -69,3 +69,5 @@ gem 'bootstrap', '~> 4.0.0'
 gem 'cancancan', '~> 1.10'
 
 gem 'will_paginate'
+
+gem 'stripe'
