@@ -8,7 +8,9 @@ class ProductsController < ApplicationController
       search_term = params[:q]
       @products = Product.search(search_term)
     else
+      redisproducts = $redis.get("products")
       @products = Product.all
+      $redis.set("products", @products)
     end
   end
 
