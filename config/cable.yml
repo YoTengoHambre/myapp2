@@ -6,5 +6,5 @@ test:
 
 production:
   adapter: redis
-  url: ENV["REDIS_URL"]
+  url: redis://h:p15aa6469dd09ef025349f74caf979b831bb52167f1e5aab6658a0ace72675b5a@ec2-35-170-142-194.compute-1.amazonaws.com:32959
   channel_prefix: myapp2_production
