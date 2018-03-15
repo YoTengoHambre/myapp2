@@ -27,6 +27,8 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 gem 'redis', '~> 3.0'
 
+gem 'redis-rails', '~> 5'
+
 gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
 # Use ActiveModel has_secure_password
 gem 'rails-controller-testing'
