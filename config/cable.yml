@@ -5,6 +5,11 @@ test:
   adapter: async
 
 production:
-  adapter: redis
-  url: <%=ENV['REDIS_URL']%>
-  channel_prefix: myapp2_production
+  adapter: postgresql
+  url: <%= ENV['DATABASE_URL'] %>
+#  url: <%=ENV['REDIS_URL']%>
+#  channel_prefix: myapp2_production
+
+#  adapter: redis
+#  url: <%=ENV['REDIS_URL']%>
+#  channel_prefix: myapp2_production

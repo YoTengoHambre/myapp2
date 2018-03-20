@@ -98,4 +98,8 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
   config.cache_store = :redis_store if ENV['REDIS_URL']
+
+config.web_socket_server_url = "wss://rubyonrailsproductionapp.herokuapp.com/cable"
+config.action_cable.allowed_request_origins = ['https://your-app-name.herokuapp.com', 'http://rubyonrailsproductionapp.herokuapp.com']
+
 end
