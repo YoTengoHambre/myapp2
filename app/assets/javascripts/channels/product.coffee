@@ -7,8 +7,4 @@ App.product = App.cable.subscriptions.create "ProductChannel",
 
   received: (data) ->
     # Called when there's incoming data on the websocket for this channel
-    alert('we got dataddaaaabbbbbb')
-    alert('next alert')
-    alert($(".alert.alert-info").length)
-    console.log($(".alert.alert-info").length)
     $(".alert.alert-info").show()

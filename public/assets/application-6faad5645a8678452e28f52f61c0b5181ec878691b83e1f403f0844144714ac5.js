@@ -11573,9 +11573,6 @@ $(document).ready(function(){
     }
   });
 
-  alert($(".alert.alert-info").length);
-
-  console.log($(".alert.alert-info").length);
 
   $(".alert.alert-info").show();
 
