@@ -5,7 +5,11 @@ class Product < ApplicationRecord
 	validates :name, presence: true
 	
 	def self.search(search_term)
-  		Product.where("name LIKE ?", "%#{search_term}%")
+		if Rails.env != "production"
+			Product.where("name || colour || description LIKE ?", "%#{search_term}%")
+		else
+			Product.where("name || colour || description iLIKE ?", "%#{search_term}%")
+		end
 	end
 	
 	def highest_rating_comment
