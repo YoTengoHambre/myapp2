@@ -2,6 +2,8 @@ class Comment < ApplicationRecord
   belongs_to :user
   belongs_to :product
   
+	after_create_commit { CommentUpdateJob.perform_later(self, self.user) }
+
   validates :body, presence: true
   validates :user, presence: true
   validates :product, presence: true
